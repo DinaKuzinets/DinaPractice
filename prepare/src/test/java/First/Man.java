@@ -1,3 +1,5 @@
+package First;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,12 +18,12 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
-public class AppManager {
+public class Man {
     WebDriver wd;
     private String browser;
 
 
-    public AppManager(String browser) {
+    public Man(String browser) {
         this.browser = browser;
     }
 
@@ -77,11 +79,11 @@ public class AppManager {
 
 
 
-    Logger logger = LoggerFactory.getLogger(AppManager.class);
+    Logger logger = LoggerFactory.getLogger(Man.class);
 
 
-    protected static final AppManager app =
-            new AppManager(System.getProperty("browser",BrowserType.FIREFOX));
+    protected static final Man app =
+            new Man(System.getProperty("browser",BrowserType.FIREFOX));
 
     @BeforeSuite
     public void setUp() throws Exception {
