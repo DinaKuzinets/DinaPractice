@@ -26,7 +26,7 @@ public class HelperBase {
     }
 
 
-    private WebElement waitUntilElementIsLodedCustomTime(By by, int time, String error_message) {
+    WebElement waitUntilElementIsLodedCustomTime(By by, int time, String error_message) {
         WebDriverWait wait = new WebDriverWait(driver, time);
         wait.withMessage(error_message + "\n");
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
